@@ -170,8 +170,8 @@ const TicTacToe = () => {
 
     return (
         <>
-            <Table onClick={onClickTable} tableData={tableData} dispatch={dispatch} />
-            {winner && <div>{winner}님의 승리</div>}
+            {/* <Table onClick={onClickTable} tableData={tableData} dispatch={dispatch} />
+            {winner && <div>{winner}님의 승리</div>} */}
         </>
     )
 }

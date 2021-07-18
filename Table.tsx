@@ -1,22 +1,15 @@
 import * as React from 'react';
+import { useContext } from 'react';
 import { useMemo, FC, Dispatch } from 'react';
+import { TableContext } from './MineSearch';
 import Tr from './Tr'
 
-interface Props {
-    tableData: string[][],
-    dispatch: Dispatch<any>; // ReducerActions //일단 any로 사용
-    onClick: () => void;
-}
 
-const Table: FC<Props> = ({ tableData, dispatch }) => {
+const Table = () => {
+    const { tableData } = useContext(TableContext);
     return (
         <table>
-            {Array(tableData.length).fill(null).map((tr, i) => (
-                useMemo(() =>
-                    <Tr key={i} dispatch={dispatch} rowIndex={i} rowData={tableData[i]} />,
-                    [tableData[i]]
-                )
-            ))}
+            {Array(tableData.length).fill(null).map((tr, i) => <Tr rowIndex={i} />)}
         </table>
     )
 }
