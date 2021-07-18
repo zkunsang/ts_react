@@ -258,3 +258,5 @@ const MineSearch = () => {
         </TableContext.Provider>
     )
 }
+
+export default MineSearch;
