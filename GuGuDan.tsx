@@ -15,7 +15,7 @@ const GuGuDan = () => {
         const input = inputEl.current;
 
         if (parseInt(value) === first * second) {
-            setResult('correct');
+            setResult('correct1');
             setFirst(Math.random() * 9);
             setSecond(Math.random() * 9);
         } else {
